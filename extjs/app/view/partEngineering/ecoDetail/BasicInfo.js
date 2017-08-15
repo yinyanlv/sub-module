@@ -1,0 +1,63 @@
+Ext.define('App.view.partEngineering.ecoDetail.BasicInfo', {
+	extend: 'Ext.form.Panel',
+	alias: 'widget.ecodetailbasicInfo',
+	style: 'background-color:#fff',
+	layout: 'column',
+	defaults: {
+		xtype: 'textfield',
+		width: 200,
+		labelWidth: 110,
+		margin: '0 10 5 0',
+		columnWidth: 0.16,
+		readOnly: true
+	},
+	items: [{
+		fieldLabel: 'ECO编码',
+		name: 'ecoCode'
+	}, {
+		fieldLabel: '变更所有者',
+		name: 'ecoOwner'
+	}, {
+		fieldLabel: 'ECO描述',
+		name: 'ecoDescription'
+	}, {
+		fieldLabel: 'SMT',
+		name: 'ecoSmt'
+	}, {
+		fieldLabel: '影响项目',
+		name: 'ecoAffectedVehicles'
+	}, {
+		fieldLabel: 'ECR编码',
+		name: 'ecrCode'
+	}, {
+		fieldLabel: 'ECR发起者',
+		name: 'ecrChangeInitiator'
+	}, {
+		fieldLabel: 'ECR协调者',
+		name: 'ecrChangeCoordinator'
+	}, {
+		fieldLabel: '有无协同变更',
+		name: 'ecrCoordinatorChangeName'
+	}, {
+		fieldLabel: '协同关联ECR编码',
+		name: 'ecrRelatedCrNumber'
+	}, {
+		fieldLabel: 'ECR变更方案',
+		name: 'ecrProposedChange'
+	}, {
+		fieldLabel: 'ECR变更原因',
+		name: 'ecrReasonForChange'
+	}, {
+		fieldLabel: 'ECR影响配置',
+		name: 'ecrAffectedOptions'
+	}, {
+		fieldLabel: 'ECR影响组织',
+		name: 'ecrSmtTeamAffected'
+	}, {
+		fieldLabel: 'ECR影响工厂',
+		name: 'ecrAffectedPlants'
+	}, {
+		fieldLabel: '预估断点时间',
+		name: 'ecrForecastBreakpoint'
+	}]
+});

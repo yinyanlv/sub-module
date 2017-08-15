@@ -1,0 +1,39 @@
+Ext.define('App.view.basicInfo.reserveSuggestType.Query', {
+	extend: 'Ext.ux.component.filter.Query',
+	alias: 'widget.reservesuggesttypequery',
+	items: [{
+		items: [{
+			fieldLabel: '储备建议类型编码',
+			name: 'code'
+		}, {
+			fieldLabel: '储备建议类型名称',
+			name: 'name'
+		}, {
+			fieldLabel: '创建人',
+			name: 'createdBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-起',
+			name: 'createdDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-止',
+			name: 'createdDate_E',
+			format: 'Y-m-d'
+		}, {
+			fieldLabel: '修改人',
+			name: 'modifiedBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-起',
+			name: 'modifiedDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-止',
+			name: 'modifiedDate_E',
+			format: 'Y-m-d'
+		}]
+	}]
+});

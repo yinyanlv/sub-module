@@ -1,0 +1,60 @@
+Ext.define('App.view.legendCatalog.legendUsage.Query', {
+	extend: 'Ext.ux.component.filter.Query',
+	alias: 'widget.legendusagequery',
+	items: [{
+		items: [{
+			xtype: 'basecombo',
+			fieldLabel: '品牌',
+			name: 'brandCode',
+			withAll: true,
+			value: '',
+			clearFields: ['seriesCode'],
+			url: App.globalConfig.path + '/combo/brand/list'
+		}, {
+			xtype: 'basecombo',
+			fieldLabel: '车系',
+			name: 'seriesCode',
+			withAll: true,
+			value: '',
+			dependFields: ['brandCode'],
+			url: App.globalConfig.path + '/combo/brand-series/list?parentCode={brandCode}'
+		}, {
+			fieldLabel: '图例编码',
+			name: 'legendCode'
+		}, {
+			fieldLabel: '图例名称',
+			name: 'legendName'
+		}, {
+			fieldLabel: '图例备注',
+			name: 'legendNote'
+		}, {
+			fieldLabel: '图例标准名称编码',
+			name: 'legendStandardNameCode'
+		}, {
+			fieldLabel: '图例标准名称',
+			name: 'legendStandardNameName'
+		}, {
+			allowBlank: true,
+			xtype: 'treecombo',
+			fieldLabel: '图例分组',
+			rootVisible: false,
+			name: 'legendGroupCode',
+			canSelectFolders: false,
+			isAllExpand: true,
+			store: Ext.create('App.store.common.LegendGroup')
+		}, {
+			fieldLabel: '创建人',
+			name: 'createdBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-起',
+			name: 'createdDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-止',
+			name: 'createdDate_E',
+			format: 'Y-m-d'
+		}]
+	}]
+});

@@ -1,0 +1,282 @@
+@include treelist-ui(
+        $ui: 'navigation',
+        $padding: 0 10px,
+          // Black-ish background color
+        $background-color: $tree-nav-bg-color,
+        $toolstrip-background-color: $tree-nav-bg-color,
+        $tool-float-indicator-color: $panel-header-background-color,
+        $tool-float-indicator-width: 5px,
+        $tool-indicator-selected-color: $tree-selected-bg-color,
+        $tool-indicator-selected-width: 5px,
+        $tool-selected-background-color: $tree-selected-bg-color,
+          // Darker background for expanded subtrees
+        $item-expanded-background-color: $item-expanded-background-color,
+          // Taller line height
+        $item-line-height: $tree-nav-item-line-height,
+        $row-over-background-color: $tree-row-hover-bg-color,
+        $row-selected-background-color: $tree-selected-bg-color,
+          // Off-white text
+        $item-icon-color: $tree-nav-item-icon-color,
+        $item-expander-color: $tree-nav-item-icon-color,
+        $item-text-color: $tree-nav-item-color,
+          // Brighter when hovered
+        $item-icon-over-color: $tree-nav-item-hover-color,
+        $item-text-over-color: $tree-nav-item-hover-color,
+        $item-expander-over-color: $tree-nav-item-hover-color,
+        $item-text-font-size: 12px,
+          // Various sizes for the pieces:
+        $item-icon-font-size: 17px,
+        $item-icon-width: 30px,
+        $item-expander-font-size: 12px,
+        $item-expander-width: 24px
+);
+
+.#{$prefix}tree-icon, .#{$prefix}tree-elbow-img, .x-tree-checkbox {
+  vertical-align: text-top;
+}
+
+.#{$prefix}tree-elbow-img,
+.#{$prefix}tree-icon {
+  vertical-align: middle;
+}
+
+.collapsed {
+
+  .hot-icon, .new-icon {
+
+    &:after {
+      display: none;
+    }
+  }
+
+  .x-tree-elbow-img {
+    display: none;
+  }
+
+  .x-tree-node-text {
+    display: none;
+  }
+}
+
+.x-treelist-item-tool {
+  height: $tree-nav-item-line-height;
+
+  &.hot-icon:after, &.new-icon:after {
+    background: $panel-header-background-color;
+    content: '';
+  }
+}
+
+.treelist-with-nav .#{$prefix}panel-body {
+  background-color: $tree-nav-bg-color;
+}
+
+.x-treelist-navigation {
+  width: $tree-nav-width + 50;
+  font-weight: bold;
+}
+
+.x-treelist-item-icon.x-fa.fa-list-ul, .x-treelist-item-icon.x-fa.fa-list-alt {
+  font-size: 12px;
+  width: 24px;
+  line-height: 31px;
+}
+
+.x-treelist-item-icon.x-fa.fa-list-ul {
+  font-size: 12px;
+}
+
+// 二级菜单
+// .x-treelist-item-icon.x-fa.fa-list-ul + div,.x-treelist-item-icon.x-fa.fa-list-alt + div{
+//     margin-left:24px;
+//     font-size:12px;
+// }
+
+//三级菜单
+.x-treelist-item-icon.x-fa.fa-list-ul + div {
+  font-weight: normal;
+}
+
+.x-btn-default-small, .x-btn-default-toolbar-small {
+  padding: 5px 7px;
+  border-width: 0;
+}
+
+.x-treelist-item-selected > .x-treelist-row {
+  .x-treelist-item-text,
+  .x-treelist-item-icon,
+  .x-treelist-item-expander {
+    color: #fff !important;
+  }
+}
+
+.edit-treelist {
+  .x-treelist-item-selected > .x-treelist-row {
+    .x-treelist-item-text,
+    .x-treelist-item-icon,
+    .x-treelist-item-expander {
+      color: $base-color !important;
+    }
+  }
+}
+
+.x-treelist-item-selected.x-treelist-item-tool {
+  color: #fff !important;
+  &:after{
+    background: transparent !important;
+  }
+}
+
+.nav-collapsing {
+  .x-treelist-item-selected .x-treelist-row {
+
+    .x-treelist-item-text {
+      color: $app-font-color !important;
+    }
+
+    .x-treelist-item-icon {
+      color: $app-icon-color !important;
+    }
+  }
+  .x-treelist-container .x-treelist-item-selected > .x-treelist-row {
+
+    .x-treelist-item-text {
+      color: #fff !important;
+    }
+
+    .x-treelist-item-icon {
+      color: #fff !important;
+    }
+  }
+}
+
+.x-treelist-navigation .x-treelist-item-tool:hover {
+  background-color: $app-btn-hover-bg-color;
+  color: #fff !important;
+}
+
+.x-treelist {
+  width: $tree-nav-width !important;
+}
+
+#navigation-wrap-body {
+  overflow-y: hidden !important;
+}
+
+#navigation-wrap-innerCt {
+  width: $tree-nav-width !important;
+}
+
+#navigation-wrap-targetEl {
+  width: $tree-nav-width !important;
+}
+
+#treelist_mcontentwrapper {
+  width: $tree-nav-width !important;
+}
+
+.x-treelist-micro .x-treelist-root-container {
+  display: none;
+}
+
+body > .x-treelist-navigation {
+  overflow: hidden;
+
+  .x-treelist-item-wrap{
+    margin-left: 30px !important;
+  }
+}
+
+body > .x-treelist {
+  width: $tree-nav-width !important;
+  max-height: $tree-nav-max-height;
+}
+
+body > .x-treelist .mcontentwrapper {
+  width: $tree-nav-width !important;
+}
+
+
+#navigationTreeList .x-treelist-toolstrip {
+  width: $tree-nav-collapsed-width !important;
+}
+
+/* nav menu expand */
+#navigationTreeList .x-treelist-toolstrip {
+  display: none;
+}
+
+#navigationTreeList .x-treelist-root-container {
+  display: block;
+}
+
+/* nav menu collapse */
+body.nav-collapsing #navigationTreeList .x-treelist-toolstrip {
+  display: block;
+}
+
+body.nav-collapsing #navigationTreeList .x-treelist-root-container {
+  display: none;
+}
+
+.scrollgeneric {
+  line-height: 1px;
+  font-size: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.vscrollerbase {
+  width: 6px;
+  background-color: $app-bd-color;
+}
+
+.vscrollerbar {
+  width: 6px;
+  background-color: darken($app-bd-color, 20%);
+  border-radius: 6px;
+}
+
+.hscrollerbase {
+  height: 6px;
+  background-color: transparent;
+}
+
+.hscrollerbar {
+  height: 6px;
+  background-color: transparent;
+  border-radius: 6px;
+}
+
+.scrollerjogbox {
+  width: 6px;
+  height: 6px;
+  top: auto;
+  left: auto;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+.hscrollerbase {
+  visibility: hidden !important;
+}
+
+/* tree search */
+.tree-search-wrap{
+  width: 250px !important;
+  .x-panel-body-default{
+     width: 250px !important;
+     background-color: #C6EEF0;
+     border:1px solid #abdbdf;
+  }
+}
+
+/* tree body */
+.tree-body-wrap{
+  width: 250px !important;
+  .x-panel-body-default{
+     width: 250px !important;
+  }
+}

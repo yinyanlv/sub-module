@@ -1,0 +1,52 @@
+Ext.define('App.view.partEngineering.aftersalesProductionPartMapping.Query', {
+	extend: 'Ext.ux.component.filter.Query',
+	alias: 'widget.aftersalesproductionpartmappingquery',
+	items: [{
+		items: [{
+			fieldLabel: '生产件编码',
+			name: 'referPartCode'
+		}, {
+			fieldLabel: '生产件名称',
+			name: 'referPartName'
+		}, {
+			xtype: 'basecombo',
+			fieldLabel: '删除标识',
+			name: 'deletedCode',
+			withAll: true,
+			value: '',
+			url: App.globalConfig.path + '/combo/common-dropdown-box/list?type=deleted'
+		}, {
+			fieldLabel: '售后专用件编码:',
+			name: 'afterSalesPartCode'
+		}, {
+			fieldLabel: '售后专用件名称',
+			name: 'afterSalesPartName'
+		}, {
+			fieldLabel: '创建人',
+			name: 'createdBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-起',
+			name: 'createdDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-止',
+			name: 'createdDate_E',
+			format: 'Y-m-d'
+		}, {
+			fieldLabel: '修改人',
+			name: 'modifiedBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-起',
+			name: 'modifiedDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-止',
+			name: 'modifiedDate_E',
+			format: 'Y-m-d'
+		}]
+	}]
+});

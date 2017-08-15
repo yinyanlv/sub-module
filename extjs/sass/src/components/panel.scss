@@ -1,0 +1,33 @@
+@include extjs-panel-ui(
+        $ui: 'grid',
+        $ui-header-background-color: $window-header-color
+);
+
+@include extjs-tab-panel-ui(
+        $ui: 'tabpanel-border',
+        $ui-bar-background-color: $tabs-wrapper-bg-color,
+        $ui-tab-border-color-active: $tabs-border-color $tabs-border-color #fff $tabs-border-color,
+        $ui-tab-background-color: $tabs-wrapper-bg-color,
+        $ui-tab-background-color-over: $tabs-wrapper-bg-color,
+        $ui-tab-color: $color,
+        $ui-tab-color-over: $tabs-hover-color,
+        $ui-tab-color-active: $tabs-border-color,
+        $ui-tab-font-weight-focus-active: bold,
+        $ui-tab-font-weight-active: bold,
+        $ui-tab-margin: 0 2px 0 0,
+        $ui-tab-padding: 2px 10px 8px 10px,
+        $ui-tab-closable-icon-glyph-color: $app-icon-color,
+        $ui-tab-closable-icon-glyph-color-over: $tabs-hover-color,
+        $ui-tab-closable-icon-glyph-color-active: $tabs-border-color,
+        $ui-tab-closable-icon-top: 2px,
+        $ui-tab-closable-icon-right: 4px,
+        $ui-tab-closable-icon-height: 14px
+);
+
+body.x-border-layout-ct, div.x-border-layout-ct {
+        background-color: $panel-body-bg-color;
+}
+
+.x-panel-header-title-default {
+        color: #fff;
+}

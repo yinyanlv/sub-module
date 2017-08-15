@@ -1,0 +1,34 @@
+Ext.define('App.model.partEngineering.PartStructQuery', {
+  extend: 'App.model.common.Base',
+  fields: [{
+    name: 'partCode'
+  }, {
+    name: 'partNameZh'
+  }, {
+    name: 'partNameEn'
+  }, {
+    name: 'servicePolicyCode'
+  }, {
+    name: 'servicePolicyName'
+  }, {
+    name: 'servicePartTypeCode'
+  }, {
+    name: 'servicePartTypeName'
+  }, {
+    name: 'parentPartCode'
+  }, {
+    name: 'parentPartNameZh'
+  }, {
+    name: 'parentPartNameEn'
+  }, {
+    name: 'qty'
+  }, {
+    name: 'usageStatusCode'
+  }, {
+    name: 'usageStatusName'
+  }, {
+    name: 'deletedCode'
+  }, {
+    name: 'deletedName'
+  }]
+});

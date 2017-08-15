@@ -1,0 +1,58 @@
+Ext.define('App.view.legendCatalog.assemblyLegendGroup.Edit', {
+    extend: 'Ext.ux.component.edit.Edit',
+    title: '一级总成件-图例分组',
+    updateDisableItems: [],
+    items: [{
+        items: [{
+            xtype: 'displayfield',
+            allowBlank: true,
+            fieldLabel: '一级总成件编码',
+            name: 'rootPartCode'
+        }, {
+            xtype: 'displayfield',
+            allowBlank: true,
+            fieldLabel: '一级总成件中文名称',
+            name: 'rootPartNameZh'
+        }, {
+            xtype: 'displayfield',
+            allowBlank: true,
+            fieldLabel: '一级总成件英文名称',
+            name: 'rootPartNameEn'
+        }, {
+            xtype: 'displayfield',
+            allowBlank: true,
+            fieldLabel: '售后FNA',
+            name: 'supcfnaCode'
+        }, {
+            xtype: 'displayfield',
+            allowBlank: true,
+            fieldLabel: '功能名称位置中文描述',
+            name: 'supcfnaNoteZh'
+        }, {
+            xtype: 'displayfield',
+            allowBlank: true,
+            fieldLabel: '功能名称位置英文描述',
+            name: 'supcfnaNoteEn'
+        }, {
+            xtype: 'displayfield',
+            allowBlank: true,
+            fieldLabel: '分配状态',
+            name: 'statusName'
+        }, {
+            xtype: 'treecombo',
+            fieldLabel: '图例分组',
+            rootVisible: false,
+            name: 'groupCode',
+            canSelectFolders: false,
+            isAllExpand: true,
+            store: Ext.create('App.store.common.LegendGroup'),
+            maxLength: 200
+        }, {
+            xtype: 'basecombo',
+            fieldLabel: 'SPL',
+            name: 'splCode',
+            withAll: false,
+            url: App.globalConfig.path + '/combo/user/list?type=SPL'
+        }]
+    }]
+});

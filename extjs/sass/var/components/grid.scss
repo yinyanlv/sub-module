@@ -1,0 +1,21 @@
+/* ------------主題包内部定义的变量-------------- */
+$grid-header-background-color: $app-grid-header-bg-color; // grid头部背景色
+$grid-header-border-color: $app-grid-header-bd-color; // grid头部边框色背景色
+$grid-header-border-width: 1px;
+$grid-body-background-color: #fff; // grid主体背景色
+$grid-row-cell-alt-background-color: $app-grid-row-bg-color-darker; // 隔行色
+$grid-row-cell-selected-background-color: $app-grid-row-selected-bg-color; // 选中色
+$grid-row-cell-over-background-color: $app-grid-row-hover-bg-color; // hover
+$grid-column-header-border-width: 0;
+$grid-row-cell-border-width: 0;
+$grid-body-border-width: 1px 1px 1px;
+$grid-body-border-color: $app-grid-header-bd-color $app-bd-color $app-bd-color !important;
+$grid-row-cell-focus-border-width: 0; // focus border
+$grid-column-header-focus-border-width: 0;
+
+/* -------------用戶自定义的变量---------------- */
+$grid-toolbar-color: $app-font-color;
+$grid-toolbar-bg-color: #fff;
+$grid-toolbar-focus-color: transparent;
+
+$grid-row-line-height: 22px;

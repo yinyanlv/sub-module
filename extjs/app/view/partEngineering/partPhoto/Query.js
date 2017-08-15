@@ -1,0 +1,42 @@
+Ext.define('App.view.partEngineering.partPhoto.Query', {
+	extend: 'Ext.ux.component.filter.Query',
+	alias: 'widget.partphotoquery',
+	items: [{
+		items: [{
+			fieldLabel: '配件编码',
+			name: 'partCode'
+		}, {
+			fieldLabel: '配件名称',
+			name: 'partName'
+		}, {
+			fieldLabel: '配件照片文件名',
+			name: 'photoOriginalFilename'
+		}, {
+			fieldLabel: '创建人',
+			name: 'createdBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-起',
+			name: 'createdDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-止',
+			name: 'createdDate_E',
+			format: 'Y-m-d'
+		}, {
+			fieldLabel: '修改人',
+			name: 'modifiedBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-起',
+			name: 'modifiedDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-止',
+			name: 'modifiedDate_E',
+			format: 'Y-m-d'
+		}]
+	}]
+});

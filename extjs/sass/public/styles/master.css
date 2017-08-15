@@ -1,0 +1,51 @@
+/*
+Error: Keyword argument "$row-indicator-selected-color" passed more than once
+        on line 83 of D:\gitworkspace\haopei-spdm-z\src\main\webapp\extjs\sass\src\master.scss
+
+78:     $item-expander-font-size: 16px,
+79:     $item-expander-width: 24px,
+80: 
+81:     // Style the "row indicator" (the vertical stripe on the left edge):
+82:     $row-indicator-width: 5px,
+83:     $row-indicator-selected-color: $panel-header-background-color,
+84:     $row-indicator-selected-over-color: lighten($panel-header-background-color, 7%),
+85:     $row-indicator-over-color: transparent
+86: );
+87: 
+88: @include extjs-tab-panel-ui(
+
+Backtrace:
+D:\gitworkspace\haopei-spdm-z\src\main\webapp\extjs\sass\src\master.scss:83
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/script/parser.rb:595:in `block in arglist'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/script/parser.rb:587:in `loop'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/script/parser.rb:587:in `arglist'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/script/parser.rb:576:in `mixin_arglist'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/script/parser.rb:120:in `parse_mixin_include_arglist'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1051:in `sass_script'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:239:in `include_directive'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:222:in `special_directive'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:197:in `directive'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/plugin.rb:82:in `update_stylesheets'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/sass_scss.rb:51:in `process_result'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/base.rb:52:in `parse'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/exec/base.rb:19:in `parse!'
+C:/Ruby22/lib/ruby/gems/2.2.0/gems/sass-3.4.22/bin/sass:13:in `<top (required)>'
+C:/Ruby22/bin/sass:23:in `load'
+C:/Ruby22/bin/sass:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Keyword argument \"$row-indicator-selected-color\" passed more than once\A         on line 83 of D:\gitworkspace\haopei-spdm-z\src\main\webapp\extjs\sass\src\master.scss\A \A 78:     $item-expander-font-size: 16px,\A 79:     $item-expander-width: 24px,\A 80: \A 81:     // Style the \"row indicator\" (the vertical stripe on the left edge):\A 82:     $row-indicator-width: 5px,\A 83:     $row-indicator-selected-color: $panel-header-background-color,\A 84:     $row-indicator-selected-over-color: lighten($panel-header-background-color, 7%),\A 85:     $row-indicator-over-color: transparent\A 86: );\A 87: \A 88: @include extjs-tab-panel-ui("; }

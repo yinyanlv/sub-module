@@ -1,0 +1,11 @@
+.#{$prefix}tip-body-form-invalid {
+  background-position: 1px 4px;
+  background-repeat: no-repeat;
+}
+
+.x-tip{
+  &.x-tip-default{
+    border-color: $app-btn-active-bg-color;
+    background: $app-btn-active-bg-color;
+  }
+}

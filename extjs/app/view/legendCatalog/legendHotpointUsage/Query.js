@@ -1,0 +1,52 @@
+Ext.define('App.view.legendCatalog.legendHotpointUsage.Query', {
+	extend: 'Ext.ux.component.filter.Query',
+	alias: 'widget.legendhotpointusagequery',
+	items: [{
+		items: [{
+			fieldLabel: '图例编码',
+			name: 'legendCode'
+		}, {
+			fieldLabel: '图例名称',
+			name: 'legendName'
+		}, {
+			fieldLabel: '售后FNA',
+			name: 'supcfnaCode'
+		}, {
+			fieldLabel: '用法是否为空',
+			xtype: 'basecombo',
+			name: 'usageIsNull',
+			withAll: true,
+			value: '',
+			url: App.globalConfig.path + '/combo/common-dropdown-box/list?type=usage_is_null'
+		}, {
+			fieldLabel: '功能名称位置描述',
+			name: 'supcfnaNote'
+		}, {
+			fieldLabel: '创建人',
+			name: 'createdBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-起',
+			name: 'createdDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-止',
+			name: 'createdDate_E',
+			format: 'Y-m-d'
+		}, {
+			fieldLabel: '修改人',
+			name: 'modifiedBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-起',
+			name: 'modifiedDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-止',
+			name: 'modifiedDate_E',
+			format: 'Y-m-d'
+		}]
+	}]
+});

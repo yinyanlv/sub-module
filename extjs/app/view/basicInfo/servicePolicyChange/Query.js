@@ -1,0 +1,41 @@
+Ext.define('App.view.basicInfo.servicePolicyChange.Query', {
+	extend: 'Ext.ux.component.filter.Query',
+	alias: 'widget.servicepolicychangequery',
+	items: [{
+		items: [{
+			fieldLabel: '维修策略变更理由编码',
+			name: 'code',
+			labelWidth: 130
+		}, {
+			fieldLabel: '维修策略变更理由名称',
+			name: 'name',
+			labelWidth: 130
+		}, {
+			fieldLabel: '创建人',
+			name: 'createdBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-起',
+			name: 'createdDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-止',
+			name: 'createdDate_E',
+			format: 'Y-m-d'
+		}, {
+			fieldLabel: '修改人',
+			name: 'modifiedBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-起',
+			name: 'modifiedDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-止',
+			name: 'modifiedDate_E',
+			format: 'Y-m-d'
+		}]
+	}]
+});

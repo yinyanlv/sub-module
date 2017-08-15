@@ -1,0 +1,61 @@
+Ext.define('App.view.partEngineering.serviceInfoPendingQuery.Grid', {
+	extend: 'Ext.ux.component.grid.Grid',
+	alias: 'widget.serviceInfopendingquerygrid',
+	store: 'App.store.partEngineering.ServiceInfoPendingQuery',
+	multiSelectCheckbox: false,
+	controlButtons: ['assign-ste'],
+	tbar: [{
+		xtype: 'button',
+		text: '导出',
+		action: 'export',
+		iconCls: 'iconfont icon-export',
+		ui: 'grid-toolbar',
+		exportUrl: App.globalConfig.path + '/eco-service-determine/export'
+	}],
+	columns: [{
+		text: 'ECO编码',
+		dataIndex: 'ecoCode',
+		locked: true,
+		width: 120
+	}, {
+		text: 'ECR编码',
+		dataIndex: 'ecrCode',
+		width: 120
+	}, {
+		text: 'ECO描述',
+		dataIndex: 'ecoDescription',
+		width: 120
+	}, {
+		text: 'ECR变更原因',
+		dataIndex: 'ecrReasonForChange',
+		width: 120
+	}, {
+		text: 'ECR变更方案',
+		dataIndex: 'ecrProposedChange',
+		width: 120
+	}, {
+		text: '维修信息判断种类',
+		dataIndex: 'serviceDetermineTypeName',
+		width: 120
+	}, {
+		text: '维修信息判断备注',
+		dataIndex: 'serviceDetermineNote',
+		width: 120
+	}, {
+		text: '创建人',
+		dataIndex: 'createdBy',
+		width: 120
+	}, {
+		text: '创建时间',
+		dataIndex: 'createdDate',
+		width: 140
+	}, {
+		text: '修改人',
+		dataIndex: 'modifiedBy',
+		width: 120
+	}, {
+		text: '修改时间',
+		dataIndex: 'modifiedDate',
+		width: 140
+	}]
+});

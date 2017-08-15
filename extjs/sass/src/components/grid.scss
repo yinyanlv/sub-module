@@ -1,0 +1,133 @@
+.grid-split {
+  .x-column-header-inner-empty {
+    display: none;
+  }
+}
+
+// grid paging 文字颜色
+.x-toolbar-text-default{
+  color: $app-font-color !important;
+}
+
+.x-grid-cell-row-numberer {
+  background: transparent;
+}
+
+// grid toolbar paging
+.x-btn-over {
+  .x-btn-icon-el.x-tbar-page-first,
+  .x-btn-icon-el.x-tbar-page-prev,
+  .x-btn-icon-el.x-tbar-page-next,
+  .x-btn-icon-el.x-tbar-page-last,
+  .x-btn-icon-el.x-tbar-loading {
+    color: #fff;
+  }
+}
+
+// grid 抬头垂直文本
+.grid-header-vertical-text {
+
+  .x-column-header-text {
+    display: inline-block;
+    height: 70px;
+
+    span {
+      -webkit-transform: translate(-50%, 100%) rotate(90deg);
+      -moz-transform: translate(-50%, 100%) rotate(90deg);
+      -o-transform: translate(-50%, 100%) rotate(90deg);
+      -ms-transform: translate(-50%, 100%) rotate(90deg);
+      transform: translate(-50%, 100%) rotate(90deg);
+      position: absolute;
+    }
+  }
+}
+
+.x-ie8 .grid-header-vertical-text .x-column-header-text {
+  /* IE8 doesn't have css transform */
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+}
+
+.x-grid-cell {
+  position:relative;
+}
+
+.#{$prefix}grid-row {
+  outline: none;
+  line-height: $grid-row-line-height;
+}
+
+.#{$prefix}column-header-inner {
+  line-height: $grid-row-line-height;
+}
+
+// set grid row height
+.x-grid-cell-inner{
+  line-height:1;
+}
+
+.x-column-header-checkbox .x-column-header-inner,
+.x-grid-checkcolumn-cell-inner {
+  padding: 4px 8px;
+}
+
+.x-column-header-inner{
+  padding:0px 10px;
+}
+
+.x-panel-edit-grid .x-panel-header-default {
+  background-color: #fff;
+  border-bottom-width: 1px !important;
+}
+
+// 设置checkbox颜色
+.x-column-header-checkbox .x-column-header-checkbox:after,
+.x-grid-checkcolumn:after {
+  color: $app-icon-color !important;
+}
+
+// 单元格内部元素垂直居中
+.x-grid-td {
+    overflow: hidden;
+    border-width: 0;
+    vertical-align: middle;
+    height: $grid-row-line-height + 4;
+}
+.edit-grid {
+
+  .x-grid-td{
+    height: $grid-row-line-height + 8;
+  }
+
+  .x-column-header{
+    height: $grid-row-line-height + 4;
+  }
+
+  .x-form-text-default{
+    padding:2px 10px;
+    height: $customer-line-height - 3 !important;
+    min-height: $customer-line-height - 3;
+  }
+
+  .x-form-trigger-default{
+    font:16px/($customer-line-height - 3) FontAwesome;
+  }
+}
+
+.x-grid-edit-cell-border {
+  .x-grid-cell-inner {
+    border:1px gray solid;
+    margin-right:2px;
+  }
+}
+
+.x-grid-edit-cell-border-clear {
+  .x-grid-cell-inner {
+    border:0;
+  }
+}
+
+.x-grid-edit-cell-border-invalid {
+  .x-grid-cell-inner{
+    border:1px red solid;
+  }
+}

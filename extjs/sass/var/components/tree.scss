@@ -1,0 +1,15 @@
+/* ------------主題包内部定义的变量-------------- */
+$item-expanded-background-color: #e6faf9;
+
+/* -------------用戶自定义的变量---------------- */
+$tree-nav-bg-color: $app-nav-wrapper-bg-color;
+$tree-nav-item-line-height: 30px;
+$tree-nav-item-color: $app-font-color;
+$tree-nav-item-icon-color: $app-icon-color;
+$tree-nav-item-hover-color: #fff;
+$tree-nav-width: 250px;
+$tree-nav-collapsed-width: 64px;
+$tree-nav-max-height: 600px;
+
+$tree-row-hover-bg-color: $app-btn-hover-bg-color;
+$tree-selected-bg-color: $app-btn-active-bg-color;

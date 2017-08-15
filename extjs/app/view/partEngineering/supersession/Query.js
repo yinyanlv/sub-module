@@ -1,0 +1,90 @@
+Ext.define('App.view.partEngineering.supersession.Query', {
+	extend: 'Ext.ux.component.filter.Query',
+	alias: 'widget.supersessionquery',
+	items: [{
+		items: [{
+			fieldLabel: '替换前配件编码',
+			name: 'oldCode'
+		}, {
+			fieldLabel: '替换前配件名称',
+			name: 'oldName'
+		}, {
+			fieldLabel: '替换后配件编码',
+			name: 'newCode'
+		}, {
+			fieldLabel: '替换后配件名称',
+			name: 'newName'
+		}, {
+			xtype: 'basecombo',
+			fieldLabel: '替换类型',
+			name: 'typeCode',
+			withAll: true,
+			value: '',
+			url: App.globalConfig.path + '/combo/supersession-type/list'
+		}, {
+			xtype: 'basecombo',
+			fieldLabel: '处理建议',
+			name: 'treatmentProposalCode',
+			withAll: true,
+			value: '',
+			displayFormat:'{code}-{name}',
+			url: App.globalConfig.path + '/combo/treatment-proposal/list'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '预估断点时间-起',
+			name: 'forecastBreakPointDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '预估断点时间-止',
+			name: 'forecastBreakPointDate_E',
+			format: 'Y-m-d'
+		}, {
+			fieldLabel: '替换备注',
+			name: 'note'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '断点时间-起',
+			name: 'breakPointDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '断点时间-止',
+			name: 'breakPointDate_E',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'basecombo',
+			fieldLabel: '删除标识',
+			name: 'deletedCode',
+			withAll: true,
+			value: '',
+			url: App.globalConfig.path + '/combo/common-dropdown-box/list?type=deleted'
+		}, {
+			fieldLabel: '创建人',
+			name: 'createdBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-起',
+			name: 'createdDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-止',
+			name: 'createdDate_E',
+			format: 'Y-m-d'
+		}, {
+			fieldLabel: '修改人',
+			name: 'modifiedBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-起',
+			name: 'modifiedDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-止',
+			name: 'modifiedDate_E',
+			format: 'Y-m-d'
+		}]
+	}]
+});

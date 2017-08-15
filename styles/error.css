@@ -1,0 +1,68 @@
+html {
+	margin:0;
+	height:100%;
+}
+body {
+	background: #ededed;
+	margin:0;
+	height:100%;
+	font:12px/1.8em 'Microsoft Yahei','Arial','Simhei','SimSun','sans-serif';
+	color:#333333;
+	min-width: 1280px;
+
+}
+.clearfix:before,.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	overflow: hidden;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	zoom:1;
+}
+.text-link {
+    color: #003c78;
+    text-decoration: underline;
+}
+.content {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -290px;
+    margin-left: -500px;
+}
+.content .detail {
+    width: 1000px;
+    height: 580px;
+    background-color: #fefefe;
+    box-shadow: 3px 3px 3px #dfdfdf;
+    text-align: center;
+    position: absolute;
+}
+.content .detail .error-text {
+	font-size: 24px;
+}
+.content .detail .option-text {
+	margin-top: 20px; 
+	font-size: 14px;
+	color: #909090;
+}
+.content .detail .option-text a {
+	margin: 0 5px;
+}
+
+/*session locked*/
+.error-icon-session-locked {
+	display: inline-block;
+	width: 248px;
+	height: 188px;
+	margin: 54px 0px 55px;
+	background: url('images/session_locked_img.png') no-repeat;
+}
+.session-locked.content .error-text span {
+	color: #d1291a;
+}

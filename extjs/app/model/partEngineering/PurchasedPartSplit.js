@@ -1,0 +1,34 @@
+Ext.define('App.model.partEngineering.PurchasedPartSplit', {
+	extend: 'App.model.common.Base',
+	fields: [{
+		name: 'id'
+	}, {
+		name: 'brandCode'
+	}, {
+		name: 'brandName'
+	}, {
+		name: 'pkg'
+	}, {
+		name: 'seriesCode'
+	}, {
+		name: 'seriesName'
+	}, {
+		name: 'smtCode'
+	}, {
+		name: 'smtName'
+	}, {
+		name: 'upcfnaCode'
+	}, {
+		name: 'upcfnaNoteZh'
+	}, {
+		name: 'upcfnaNoteEn'
+	}, {
+		name: 'spl'
+	}, {
+		name: 'spp'
+	}, {
+		name: 'ste'
+	}, {
+		name: 'upcfna'
+	}]
+});

@@ -1,0 +1,83 @@
+.assistive-tool {
+    height: 30px;
+    border-radius: 5px;
+    background: #00bcbc;
+    position: absolute;
+    cursor: move;
+    z-index:60;
+}
+
+.assistive-tool a {
+    display: inline-block;
+    float: left;
+    height: 18px;
+    margin: 6px 5px;
+    width: 18px;
+    background: url("./images/svg-tool-bg.png") no-repeat;
+    cursor: pointer;
+}
+
+/* reset */
+.assistive-tool .assistive-tool-reset {
+    background-position: 0 0;
+    
+}
+ .assistive-tool .assistive-tool-reset.disabled {
+    background-position: -47px 0;
+}
+
+.assistive-tool .assistive-tool-reset:hover {
+    background-position: -22px 0;
+}
+
+/* zoomout */
+.assistive-tool .assistive-tool-zoomout {
+    background-position: 0 -26px;
+}
+
+.assistive-tool .assistive-tool-zoomout:hover {
+    background-position: -23px -26px;
+}
+
+.assistive-tool .assistive-tool-zoomout.disabled {
+    background-position: -47px -26px;
+}
+
+/* zoomin */
+.assistive-tool .assistive-tool-zoomin {
+    background-position: 0 -54px;
+}
+
+.assistive-tool .assistive-tool-zoomin:hover {
+    background-position: -23px -54px;
+}
+
+.assistive-tool .assistive-tool-zoomin.disabled {
+    background-position: -47px -54px;
+}
+
+/* left rotate */
+.assistive-tool .assistive-tool-left-rotate{
+    background-position: 0 -160px;
+}
+
+.assistive-tool .assistive-tool-left-rotate:hover {
+    background-position: -22px -160px;
+}
+
+.assistive-tool .assistive-tool-left-rotate.disabled {
+    background-position: -47px -160px;
+}
+
+/* right rotate */
+.assistive-tool .assistive-tool-right-rotate {
+    background-position: 0 -188px;
+}
+
+.assistive-tool .assistive-tool-right-rotate:hover {
+    background-position: -22px -188px;
+}
+
+.assistive-tool .assistive-tool-right-rotate.disabled {
+    background-position: -47px -188px;
+}

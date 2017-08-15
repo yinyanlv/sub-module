@@ -1,0 +1,81 @@
+.x-box-scroller-tab-bar-tabpanel-border {
+  background: #000;
+}
+
+.x-tab-bar-tabpanel-border-top .x-box-scroller-tab-bar-tabpanel-border{
+  margin-top: -18px;
+}
+
+.x-tab-tabpanel-border {
+  border-width: 3px 1px 1px;
+
+  .x-tab-close-btn {
+    top: 3px !important;
+  }
+
+  &.x-tab-focus {
+    outline: none;
+  }
+}
+
+.x-panel-body-tabpanel-border {
+  .x-panel-body-default.x-box-layout-ct {
+    background: $panel-body-bg-color !important;
+  }
+}
+
+.tabpanel-white-bg{
+  .x-panel-body-tabpanel-border {
+    .x-panel-body-default.x-box-layout-ct {
+      background: #fff !important;
+    }
+  }
+}
+
+.x-tab.x-tab-over.x-tab-tabpanel-border {
+  border-color: transparent;
+}
+
+.x-tab{
+  top: 1px !important;
+}
+
+.x-tab.x-tab-tabpanel-border {
+  .x-tab-inner-tabpanel-border{
+    font-weight: normal;
+    position: relative;
+    top: -1px;
+  }
+}
+
+.x-tab.x-tab-active.x-tab-tabpanel-border {
+  .x-tab-inner-tabpanel-border{
+    font-weight: normal;
+  }
+}
+
+.x-tab.x-tab-active.x-tab-over.x-tab-tabpanel-border {
+  border-color: $button-default-base-color-over $button-default-base-color-over #fff $button-default-base-color-over;
+}
+
+.x-tab-bar-tabpanel-border-top > .x-tab-bar-body-tabpanel-border {
+  padding: 0 4px 0 8px;
+  border: 1px solid $app-bd-color;
+  border-top: 0;
+  &:after {
+    position: absolute;
+    content: ' ';
+    top: 27px;
+    border-bottom: 1px solid $tabs-border-color;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+  }
+  a.x-tab-tabpanel-border-top {
+    height: 28px;
+  }
+}
+
+.x-tab-active.x-tab .x-tab-tabpanel-border-top-mc {
+  background-color: $button-toolbar-color;
+}

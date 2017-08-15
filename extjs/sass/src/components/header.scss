@@ -1,0 +1,92 @@
+.app-header {
+  background: $header-bg-color;
+  border-bottom: 1px solid $header-border-color !important;
+}
+
+.header-logo {
+  height: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  .main-logo-wrap {
+    color: $header-color;
+    text-decoration: none;
+  }
+  .main-logo {
+    line-height: 50px;
+    img {
+      margin-left: 10px;
+      margin-right: 10px;
+      vertical-align: middle;
+      position: relative;
+      top: -2px;
+    }
+  }
+}
+
+.header-user {
+  .text {
+    display: inline-block;
+    margin-right: 6px;
+    vertical-align: bottom;
+  }
+}
+
+.user-wrapper {
+  background: #fff;
+  padding: 0 0 0 0;
+  position: absolute;
+  top: 50px;
+  right: 2px;
+  z-index: 10;
+  display: none;
+  @include boxShadow(-1px 1px 5px $customer-shadow-color);
+  .icon-up {
+    position: absolute;
+    top: -6px;
+    right: 15px;
+    color: $user-icon-bg-color;
+    font-size: 18px;
+  }
+  .user-menu {
+    background: $user-icon-bg-color;
+    color: $app-font-color;
+    .header-icon {
+      float: left;
+      width: 50px;
+      height: 50px;
+      margin: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+    }
+    .header-userinfo {
+      min-width: 160px;
+      float: left;
+      li {
+        font-size: 12px;
+        line-height: 18px;
+        &:first-child {
+          font-weight: bold;
+          margin-top:10px;
+        }
+      }
+    }
+  }
+  .btn-logout {
+    display: block;
+    outline: 0;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: $button-toolbar-background-color;
+    text-align: center;
+    margin: 10px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    &:hover {
+      background: $button-toolbar-background-color-over;
+    }
+  }
+}

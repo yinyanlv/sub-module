@@ -1,0 +1,137 @@
+Ext.define('App.view.partEngineering.oldPartTaskDetail.Form', {
+	extend: 'Ext.form.Panel',
+	alias: 'widget.oldparttaskdetailform',
+	bodyPadding: 5,
+	defaults: {
+		border: 1,
+		bodyPadding: 5,
+		margin: '0 0 5 0',
+		width: '100%'
+	},
+	border: false,
+	layout: 'vbox',
+	overflowY: true,
+	items: [{
+		layout: 'column',
+		defaults: {
+			columnWidth: 0.5,
+			xtype: 'displayfield',
+			height: 16
+		},
+		items: [{
+			fieldLabel: '配件编码',
+			name: 'code'
+		}, {
+			fieldLabel: '配件中文名称',
+			name: 'nameZh'
+		}, {
+			fieldLabel: '配件英文名称',
+			name: 'nameEn'
+		}, {
+			fieldLabel: '配件备注(DRE)',
+			name: 'description'
+		}, {
+			fieldLabel: '来源',
+			name: 'source'
+		}, {
+			fieldLabel: '备注（PLM）',
+			name: 'plmNote'
+		}, {
+			fieldLabel: '备注（SAP）',
+			name: 'sapNote'
+		}, {
+			fieldLabel: '备注（售后）',
+			name: 'afterSaleNote'
+		}]
+	}, {
+		layout: 'column',
+		defaults: {
+			columnWidth: 0.5,
+			xtype: 'displayfield',
+			labelWidth: 110,
+			height: 16
+		},
+		items: [{
+			fieldLabel: '设计阶段',
+			name: 'designStageName'
+		}, {
+			fieldLabel: 'SMT',
+			name: 'smtName'
+		}, {
+			fieldLabel: '参考生产件号',
+			name: 'referProductionPartCode'
+		}, {
+			fieldLabel: '配件类型(PLM)',
+			name: 'plmPartType'
+		}, {
+			fieldLabel: '初始Make/Buy',
+			name: 'initialMakeOrBuy'
+		}, {
+			fieldLabel: '设计职责',
+			name: 'designResponsibility'
+		}, {
+			fieldLabel: '位置号',
+			name: 'positionNo'
+		}, {
+			fieldLabel: '是否备件(PLM)',
+			name: 'plmIsSparePartName'
+		}, {
+			fieldLabel: '是否可维修件(PLM)',
+			name: 'plmIsServicePartName'
+		}, {
+			fieldLabel: '初始项目',
+			name: 'initialProject'
+		}, {
+			fieldLabel: '是否颜色件(PLM)',
+			name: 'plmIsColorPartName'
+		}, {
+			fieldLabel: '设计协同',
+			name: 'designCollaboration'
+		}, {
+			fieldLabel: '所有者(PLM)',
+			name: 'plmOwner'
+		}]
+	}, {
+		xtype: 'gridpanel',
+		title: 'UPCFNA',
+		itemId: 'upcfna-grid',
+		height: 150,
+		store: Ext.create('Ext.data.Store'),
+		columns: [{
+			dataIndex: 'code',
+			text: '产品UPCFNA',
+			width: 140
+		}, {
+			dataIndex: 'noteEn',
+			text: '产品功能地址英文描述',
+			width: 150
+		}, {
+			dataIndex: 'noteZh',
+			text: '产品功能地址中文描述',
+			width: 200
+		}]
+	}, {
+		xtype: 'gridpanel',
+		title: '所属结构',
+		itemId: 'part-structure',
+		flex: 1,
+		store: Ext.create('Ext.data.Store'),
+		columns: [{
+			dataIndex: 'parentNo',
+			text: 'Parent NO',
+			width: 120
+		}, {
+			dataIndex: 'finalPartNo',
+			text: 'Final Part NO',
+			width: 120
+		}, {
+			dataIndex: 'parentNoName',
+			text: '父配件号名称',
+			width: 130
+		}, {
+			dataIndex: 'finalPartNoName',
+			text: '根配件号名称',
+			width: 130
+		}]
+	}]
+});

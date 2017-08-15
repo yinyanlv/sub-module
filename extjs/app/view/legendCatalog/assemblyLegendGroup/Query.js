@@ -1,0 +1,61 @@
+Ext.define('App.view.legendCatalog.assemblyLegendGroup.Query', {
+    extend: 'Ext.ux.component.filter.Query',
+    alias: 'widget.assemblylegendgroupquery',
+    items: [{
+        items: [{
+            fieldLabel: '一级总成件编码',
+            name: 'rootPartCode'
+        }, {
+            fieldLabel: '一级总成件名称',
+            name: 'rootPartName'
+        }, {
+            fieldLabel: '售后FNA',
+            name: 'supcfnaCode'
+        }, {
+            fieldLabel: '功能名称位置描述',
+            name: 'supcfnaNote'
+        }, {
+            allowBlank: true,
+            xtype: 'treecombo',
+            fieldLabel: '图例分组',
+            rootVisible: false,
+            name: 'groupCode',
+            canSelectFolders: false,
+            isAllExpand: true,
+            store: Ext.create('App.store.common.LegendGroup')
+        }, {
+            xtype: 'basecombo',
+            fieldLabel: '分配状态',
+            name: 'statusCode',
+            withAll: true,
+            value: '',
+            url: App.globalConfig.path + '/combo/legend-rootpart-group-task-status/list'
+        }, {
+            fieldLabel: '创建人',
+            name: 'createdBy'
+        }, {
+            xtype: 'datefield',
+            fieldLabel: '创建时间-起',
+            name: 'createdDate_S',
+            format: 'Y-m-d'
+        }, {
+            xtype: 'datefield',
+            fieldLabel: '创建时间-止',
+            name: 'createdDate_E',
+            format: 'Y-m-d'
+        }, {
+            fieldLabel: '修改人',
+            name: 'modifiedBy'
+        }, {
+            xtype: 'datefield',
+            fieldLabel: '修改时间-起',
+            name: 'modifiedDate_S',
+            format: 'Y-m-d'
+        }, {
+            xtype: 'datefield',
+            fieldLabel: '修改时间-止',
+            name: 'modifiedDate_E',
+            format: 'Y-m-d'
+        }]
+    }]
+});

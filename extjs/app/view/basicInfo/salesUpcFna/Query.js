@@ -1,0 +1,47 @@
+Ext.define('App.view.basicInfo.salesUpcFna.Query', {
+	extend: 'Ext.ux.component.filter.Query',
+	alias: 'widget.salesupcfnaquery',
+	items: [{
+		items: [{
+			fieldLabel: '售后FNA',
+			name: 'code'
+		}, {
+			fieldLabel: '功能名称位置描述',
+			name: 'note'
+		}, {
+            xtype: 'treecombo',
+            fieldLabel: '图例分组',
+            rootVisible: false,
+            name: 'legendGroupCode',
+            canSelectFolders: false,
+            isAllExpand: true,
+            store: Ext.create('App.store.common.LegendGroup')
+		}, {
+			fieldLabel: '创建人',
+			name: 'createdBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-起',
+			name: 'createdDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-止',
+			name: 'createdDate_E',
+			format: 'Y-m-d'
+		}, {
+			fieldLabel: '修改人',
+			name: 'modifiedBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-起',
+			name: 'modifiedDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-止',
+			name: 'modifiedDate_E',
+			format: 'Y-m-d'
+		}]
+	}]
+});

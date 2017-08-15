@@ -1,0 +1,24 @@
+@import 'config';
+
+/* ------------主題包内部定义的变量-------------- */
+$ext-trial: false;  // 测试版水印
+$ext-beta: false;  // 测试版水印
+$font-family: 'Microsoft YaHei','Open Sans', 'Helvetica Neue', helvetica, arial, verdana, sans-serif;
+$font-weight: 400;
+$font-weight-bold: 500;
+$font-size: 12px;  // 系统文字大小
+$base-color: $app-theme-color;  // 系统主题颜色
+$color: $app-font-color;  // 系统文字颜色
+$loadmask-border-width-focus: 0;  // 设置mask边框为0
+
+/* -------------用戶自定义的变量---------------- */
+$customer-line-height: 28px;  // 用户自定义行高
+$customer-border-color: $app-bd-color;  // 用户自定义边框颜色
+$customer-shadow-color: #aaa;
+$title-vertical-line-color: $app-theme-color;  // title前竖线背景色
+$panel-body-bg-color: $app-body-bg-color;
+
+
+
+
+

@@ -1,0 +1,43 @@
+Ext.define('App.view.partOperation.packageMaterialInfo.Edit', {
+	extend: 'Ext.ux.component.edit.Edit',
+	title: '包装材料信息管理',
+	updateDisableItems: ['code'],
+	items: [{
+		items: [{
+			fieldLabel: '包装材料编码',
+			name: 'code',
+			maxLength: 50
+		}, {
+			xtype: 'textarea',
+			fieldLabel: '包装材料描述',
+			name: 'description',
+			maxLength: 200
+		}, {
+			allowBlank: true,
+			fieldLabel: '包装材料类型',
+			name: 'type',
+			maxLength: 200
+		}, {
+			xtype: 'numberfield',
+			allowBlank: true,
+			fieldLabel: '长',
+			minValue: 0.000001,
+			maxValue: 999999.999999,
+			name: 'length'
+		}, {
+			xtype: 'numberfield',
+			allowBlank: true,
+			fieldLabel: '宽',
+			minValue: 0.000001,
+			maxValue: 999999.999999,
+			name: 'width'
+		}, {
+			xtype: 'numberfield',
+			allowBlank: true,
+			fieldLabel: '高',
+			minValue: 0.000001,
+			maxValue: 999999.999999,
+			name: 'height'
+		}]
+	}]
+});

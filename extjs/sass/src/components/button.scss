@@ -1,0 +1,58 @@
+// header中的按钮
+@include extjs-button-small-ui(
+        $ui: 'header',
+        $color: #fff,
+        $glyph-color: #fff,
+        $background-color: transparent,
+        $background-color-over: $app-btn-hover-bg-color,
+        $background-color-pressed: $app-btn-active-bg-color,
+        $background-color-focus: $app-btn-active-bg-color,
+        $inner-border-width: 0,
+        $border-width: 0
+);
+
+// header右侧，用户按钮
+@include extjs-button-small-ui(
+        $ui: 'header-user',
+        $color: #fff,
+        $glyph-color: #fff,
+        $color-over: $header-hover-color,
+        $color-pressed: $header-hover-color,
+        $color-focus: $header-hover-color,
+        $background-color: transparent,
+        $background-color-over: $user-btn-active-bg-color,
+        $background-color-pressed: $user-btn-active-bg-color,
+        $background-color-focus: $user-btn-active-bg-color,
+        $inner-border-width: 0,
+        $border-width: 0
+);
+
+// grid中toolbar按钮
+@include extjs-button-small-ui(
+        $ui: 'grid-toolbar',
+        $color: $grid-toolbar-color,
+        $padding: 2px,
+        $glyph-color: $grid-toolbar-color,
+        $border-color: $grid-toolbar-bg-color,
+        $border-color-over: $app-bd-color,
+        $border-color-focus: $grid-toolbar-focus-color,
+        $inner-border-color-focus: $grid-toolbar-focus-color,
+        $background-color: $grid-toolbar-bg-color,
+        $background-color-over: $grid-toolbar-bg-color,
+        $background-color-focus: $grid-toolbar-focus-color,
+        $background-color-pressed: $grid-toolbar-focus-color,
+        $border-color-pressed: $grid-toolbar-bg-color,
+        $inner-border-width-focus-pressed: 0,
+        $glyph-color: $app-icon-color
+);
+
+// grid中行内按钮
+.btn-tb-link-small{
+        padding:0px 10px 0px 10px;
+        background-color: $button-toolbar-background-color;
+        color:$button-toolbar-color;
+        text-decoration:none;
+        &:hover{
+            background-color: $button-toolbar-background-color-over;
+        }
+}

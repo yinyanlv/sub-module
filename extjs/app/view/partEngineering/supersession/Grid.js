@@ -1,0 +1,98 @@
+Ext.define('App.view.partEngineering.supersession.Grid', {
+	extend: 'Ext.ux.component.grid.Grid',
+	alias: 'widget.supersessiongrid',
+	store: 'App.store.partEngineering.Supersession',
+	multiSelectCheckbox: true,
+	controlButtons: ['update'],
+	tbar: [{
+		iconCls: 'x-fa fa-plus-square-o',
+		tooltip: '新增',
+		text: '新增',
+		action: 'create',
+		ui: 'grid-toolbar'
+	}, {
+		iconCls: 'x-fa fa-edit',
+		text: '修改',
+		tooltip: '修改',
+		action: 'update',
+		disabled: true,
+		singleSelectEnable: true,
+		ui: 'grid-toolbar'
+	}, {
+		xtype: 'button',
+		text: '导出',
+		action: 'export',
+		iconCls: 'iconfont icon-export',
+		ui: 'grid-toolbar',
+		exportUrl: App.globalConfig.path + '/supersession/export'
+	}],
+	columns: [{
+		text: '替换前配件编码',
+		dataIndex: 'oldCode',
+		width: 140
+	}, {
+		text: '替换前配件中文名称',
+		dataIndex: 'oldNameZh',
+		width: 140
+	}, {
+		text: '替换前配件英文名称',
+		dataIndex: 'oldNameEn',
+		width: 140
+	}, {
+		text: '替换类型',
+		dataIndex: 'typeName',
+		width: 100
+	}, {
+		text: '处理建议',
+		dataIndex: 'treatmentProposalName',
+		width: 140
+	}, {
+		text: '替换后配件编码',
+		dataIndex: 'newCode',
+		width: 140
+	}, {
+		text: '替换后配件中文名称',
+		dataIndex: 'newNameZh',
+		width: 140
+	}, {
+		text: '替换后配件英文名称',
+		dataIndex: 'newNameEn',
+		width: 140
+	}, {
+		text: '替换备注',
+		dataIndex: 'note',
+		width: 160
+	}, {
+		text: '预估断点时间',
+		dataIndex: 'forecastBreakPointDate',
+		width: 140
+	}, {
+		text: '断点时间',
+		dataIndex: 'breakPointDate',
+		width: 140
+	}, {
+		text: '断点信息（by vin）',
+		dataIndex: 'breakPointInfoByVin',
+		width: 140
+	}, {
+		text: '删除标识',
+		dataIndex: 'deletedName',
+		width: 100
+	}, {
+		text: '创建人',
+		dataIndex: 'createdBy',
+		width: 100
+	}, {
+		text: '创建时间',
+		dataIndex: 'createdDate',
+		width: 140
+	}, {
+		text: '修改人',
+		dataIndex: 'modifiedBy',
+		width: 100
+	}, {
+		text: '修改时间',
+		dataIndex: 'modifiedDate',
+		width: 140
+	}]
+});

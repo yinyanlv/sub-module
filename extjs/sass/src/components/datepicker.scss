@@ -1,0 +1,12 @@
+// 时间下拉箭头
+.x-datepicker-month {
+
+  .x-btn-split-right:after {
+    color: $app-bd-color;
+  }
+
+  .x-btn-over .x-btn-split-right:after{
+    color: $app-bd-color;
+  }
+}
+

@@ -1,0 +1,39 @@
+Ext.define('App.view.basicInfo.partCategory.Query', {
+	extend: 'Ext.ux.component.filter.Query',
+	alias: 'widget.partcategoryquery',
+	items: [{
+		items: [{
+			fieldLabel: '配件分类编码',
+			name: 'code'
+		}, {
+			fieldLabel: '配件分类名称',
+			name: 'name'
+		}, {
+			fieldLabel: '创建人',
+			name: 'createdBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-起',
+			name: 'createdDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '创建时间-止',
+			name: 'createdDate_E',
+			format: 'Y-m-d'
+		}, {
+			fieldLabel: '修改人',
+			name: 'modifiedBy'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-起',
+			name: 'modifiedDate_S',
+			format: 'Y-m-d'
+		}, {
+			xtype: 'datefield',
+			fieldLabel: '修改时间-止',
+			name: 'modifiedDate_E',
+			format: 'Y-m-d'
+		}]
+	}]
+});
