@@ -1,6 +1,6 @@
 {
- "version": "v0.5",
- "message": "这是一个修改的sbom",
+ "version": "v0.6",
+ "message": "这是又一个修改的sbom",
  "updatePaths": [
   "/extjs/app/core",
   "/extjs/ext/charts",
