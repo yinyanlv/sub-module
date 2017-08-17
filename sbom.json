@@ -1,0 +1,15 @@
+{
+ "updatePaths": [
+  "/extjs/app/core",
+  "/extjs/ext/charts",
+  "/extjs/ext/locale",
+  "/extjs/overrides",
+  "/extjs/packages",
+  "/extjs/resources/fonts",
+  "/extjs/resources/images",
+  "/extjs/sass/etc",
+  "/extjs/app.js",
+  "/styles",
+  "/WEB-INF/view/config/coreExtjsConfig.jsp"
+ ]
+}
